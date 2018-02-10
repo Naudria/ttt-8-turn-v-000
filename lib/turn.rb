@@ -16,10 +16,7 @@ def valid_move?(board, index)
 end
 
 def position_taken?(board, index)
-  if board[index] == " "
-    false
-  else
-    true
+  !(board[index] == " ")
 end
 
 def move(board, position, token)
