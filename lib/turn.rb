@@ -30,6 +30,7 @@ def turn(board)
   position = gets.strip
   if valid_move?(board, position)
     move(board, position, "X")
+    display_board(board)
   else
     turn(board)
 end
