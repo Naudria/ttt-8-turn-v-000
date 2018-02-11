@@ -20,7 +20,7 @@ def position_taken?(board, index)
 end
 
 def move(board, position, token)
-  index = position.to_i
+  index = position.to_i - 1
   board[index] = token
   display_board(board)
 end
