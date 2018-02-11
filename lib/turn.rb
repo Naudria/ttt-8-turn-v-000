@@ -29,13 +29,12 @@ def turn(board)
   puts "Please enter 1-9:"
   position = gets.strip
   index = input_to_index(position)
-  if valid_move?(board, position)
-    token = current_player(board)
-    move(board, position, token)
-    display_board(board)
-  else
-    turn(board)
-end
+  if valid_move?(board, index) == true
+   move(board, index, current_player(board))
+   board
+ else valid_move?(board, index) == false
+   turn(board)
+ end
 end
 
 def turn_count(board)
