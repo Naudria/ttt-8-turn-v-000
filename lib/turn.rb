@@ -11,7 +11,7 @@ def input_to_index(input)
 end
 
 def valid_move?(board, position)
-  index = position.to_i-1
+  index = position.to_i
   index.between(0,8) && !position_taken?(board, index)
 end
 
@@ -20,7 +20,7 @@ def position_taken?(board, index)
 end
 
 def move(board, position, token)
-  index = position.to_i-1
+  index = position.to_i
   board[index] = token
   display_board(board)
 end
@@ -37,5 +37,5 @@ end
 end
 
 def turn_count(board)
-
+  board.count(" ")
 end
